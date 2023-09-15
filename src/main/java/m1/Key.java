@@ -13,7 +13,7 @@ public class Key {
     }
 
     private void generateSolution() {
-        int[] buttonNum = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        //int[] buttonNum = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
         HashSet<Integer> numList = new HashSet<Integer>();
         numList.add(0);
@@ -34,8 +34,6 @@ public class Key {
         numList.add(15);
        
 
-        System.out.println(numList);
-
         int index = 0;
         Random rand = new Random();
         int randNum;
@@ -50,10 +48,34 @@ public class Key {
                 // remove that number from hashset
                 numList.remove(randNum);
             }
-            /*
-             * else { index++; }
-             */
+            
         }
-        System.out.print("Done!");
+        for (int x : solution) {
+            if(solution[x] == 8) {
+                solution[x] = 0;
+            }
+            if(solution[x] == 9) {
+                solution[x] = 1;
+            }
+            if(solution[x] == 10) {
+                solution[x] = 2;
+            }
+            if(solution[x] == 11) {
+                solution[x] = 3;
+            }
+            if(solution[x] == 12) {
+                solution[x] = 4;
+            }
+            if(solution[x] == 13) {
+                solution[x] = 5;
+            }
+            if(solution[x] == 14) {
+                solution[x] = 6;
+            }
+            if(solution[x] == 15) {
+                solution[x] = 7;
+            }
+            
+        }
     }
 }
